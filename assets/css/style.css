@@ -5,6 +5,7 @@
 html, body {
     margin: 0;
     font-family: "Lato", sans-serif;
+    width: 100%;
 }
 
 .webinar__header {
@@ -100,7 +101,7 @@ html, body {
     z-index: 1;
 }
 
-.webinar__image:last-of-type {
+.webinar__image.webinar__image-2 {
     width: 442px;
     max-height: 352px;
     top: 217px;
@@ -212,24 +213,181 @@ html, body {
     line-height: 24px;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1200px) {
+    .webinar__image.webinar__image-2 {
+        right: 12px;
+    }
 
+    .webinar__image-container:last-of-type {
+        right: 0;
+    }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 920px) and (max-width: 1050px) {
+    .webinar__image.webinar__image-1 {
+        width: 390px;
+        top: 330px;
+    }
+
+    .webinar__image.webinar__image-2 {
+        width: 420px;
+        top: 240px;
+    }
+
+    .webinar__image-container:first-of-type {
+        width: 414px;
+        top: 318px;
+    }
+
+    .webinar__image-container:last-of-type {
+        width: 444px;
+        top: 228px;
+    }
+}
+
+@media (max-width: 919px) {
+    .webinar__container {
+        min-height: 635px;
+    }
+    .webinar__image.webinar__image-1 {
+        top: unset;
+        right: unset;
+        bottom: -158px;
+        left: 12px;
+    }
+
+    .webinar__image-container:first-of-type {
+        top: unset;
+        right: unset;
+        bottom: -185px;
+    }
+
+    .webinar__image.webinar__image-2 {
+        top: unset;
+        right: 12px;
+        bottom: -78px;
+    }
+
+    .webinar__image-container:last-of-type {
+        top: unset;
+        right: 0;
+        bottom: -124px;
+    }
+
+    .webinar__header-h2 {
+        margin-bottom: revert;
+    }
+}
+
+@media (max-width: 767px) {
+    .webinar__main .webinar__container {
+        flex-direction: column;
+    }
+
+    .webinar__main-col.main-col-1 {
+        margin: 0 auto;
+    }
+
+    .main-col-2 {
+        max-width: unset;
+        margin-top: 66px;
+    } 
+}
+
+@media (max-width: 590px) {
+    .webinar__header-button {
+        display: block;
+        float: none;
+    }
+
+    .webinar__logo {
+        margin-bottom: 36px;
+    }
+
     .webinar__header-h1 {
         font-size: 40px;
         line-height: 52px;
+        margin-top: 24px;
     }
 
     .webinar__header-h2 {
         font-size: 32px;
         line-height: 44px;
+        margin-bottom: 36px;
     }
 
     .webinar__header-h3 {
         font-size: 16px;
         line-height: 28px;
+    }
+
+    .webinar__image.webinar__image-1 {
+        bottom: -45px;
+        left: 12px;
+        width: 290px;
+    }
+
+    .webinar__image-container:first-of-type {
+        width: 314px;
+        bottom: -33px;
+        max-height: 182px;
+    }
+
+    .webinar__image.webinar__image-2 {
+        bottom: -40px;
+        width: 340px;
+        height: 257px;
+    }
+
+    .webinar__image-container:last-of-type {
+        width: 364px;
+        height: 281px;
+        bottom: -28px;
+        max-height: 257px;
+    }
+}
+
+@media (max-width: 440px) {
+    .webinar__container {
+        min-height: 600px;
+    }
+
+    .webinar__image.webinar__image-1 {
+        bottom: -45px;
+        left: 6px;
+        width: 249px;
+    }
+
+    .webinar__image-container:first-of-type {
+        width: 261px;
+        bottom: -51px;
+        max-height: 168px;
+    }
+
+    .webinar__image.webinar__image-2 {
+        bottom: -30px;
+        width: 226px;
+        height: 200px;
+        object-fit: cover;
+        right: 6;
+    }
+
+    .webinar__image-container:last-of-type {
+        width: 238px;
+        height: 212px;
+        bottom: -36px;
+    }
+
+    .webinar__main {
+        margin-top: 40px;
+    }   
+    
+    .webinar__main-col.main-col-1 {
+        padding: 20px;
+    }
+
+    .main-col-2 {
+        padding: 0;
     }
 }
 
@@ -530,5 +688,33 @@ footer.footer {
 
     .footer__text:not(:last-child) {
         margin: 0 0 16px;
+    }
+
+    footer.footer {
+        margin-top: 66px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .footer__wrapper {
+        margin-bottom: 13px;
+    }
+
+    .footer__security-logos {
+        flex-wrap: wrap;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    .footer__security-icon:nth-child(n) {
+        margin-bottom: 20px;
+    }
+
+    .footer__security-icon:nth-child(2) {
+        margin-right: 0;
     }
 }
